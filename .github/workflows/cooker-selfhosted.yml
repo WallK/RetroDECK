@@ -88,7 +88,7 @@ jobs:
             Cooker channel is provided for the community to test fixes and explore new functionality.
             Please DO NOT open issues or ask support on this build.
 
-          artifacts: "${GITHUB_WORKSPACE}/RetroDECK.flatpak,${GITHUB_WORKSPACE}/RetroDECK-Artifact.tar.gz"
+          artifacts: "RetroDECK.flatpak,RetroDECK-Artifact.tar.gz"
           allowUpdates: true
           #prerelease: true
           draft: false
