@@ -67,7 +67,9 @@ jobs:
           tree actions-runner/_work/RetroDECK
           ls -lah ~
           ls -lah ${GITHUB_WORKSPACE}/local
+          ls -lah ${GITHUB_WORKSPACE}/retrodeck-flatpak-cooker
           ls -lah actions-runner/_work/RetroDECK/RetroDECK
+        continue-on-error: true
 
       - name: Set environment variable with current branch name
         run: echo "GITHUB_REF_SLUG=$(git rev-parse --abbrev-ref HEAD)" >> $GITHUB_ENV
