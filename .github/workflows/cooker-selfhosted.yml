@@ -61,6 +61,14 @@ jobs:
         run: |
           flatpak build-bundle ${GITHUB_WORKSPACE}/local RetroDECK.flatpak net.retrodeck.retrodeck
 
+      - name: "[DEBUG] listing files"
+        run: |
+          tree ~
+          tree actions-runner/_work/RetroDECK
+          ls -lah ~
+          ls -lah ${GITHUB_WORKSPACE}/local
+          ls -lah actions-runner/_work/RetroDECK/RetroDECK
+
       - name: Set environment variable with current branch name
         run: echo "GITHUB_REF_SLUG=$(git rev-parse --abbrev-ref HEAD)" >> $GITHUB_ENV
 
