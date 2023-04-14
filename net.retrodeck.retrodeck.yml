@@ -69,6 +69,7 @@ modules:
     build-commands:
       - |
         ls -lah #DEBUG
+        tar -zxvf ryujinx-1.1.685-linux_x64.tar.gz
         mv publish ${FLATPAK_DEST}/ryujinx
         ls -lah ${FLATPAK_DEST} #DEBUG
         ln -s ${FLATPAK_DEST}/ryujinx/Ryujinx /app/bin/Ryujinx
