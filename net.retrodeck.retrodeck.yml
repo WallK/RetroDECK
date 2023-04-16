@@ -6,6 +6,11 @@ sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.llvm14    # Needed for rpcs3
   #- org.freedesktop.Sdk.Extension.dotnet6   # Needed for Ryujinx - Removed, check if it's not breaking something else
+add-extensions:                             # Needed for RYUJINX
+  org.freedesktop.Platform.ffmpeg-full:
+    version: '22.08'
+    directory: lib/ffmpeg
+    add-ld-path: .                          # /Needed for RYUJINX
 base: io.qt.qtwebengine.BaseApp             # Needed for Yuzu
 base-version: 5.15-22.08                    # Needed for Yuzu
 command: retrodeck.sh
