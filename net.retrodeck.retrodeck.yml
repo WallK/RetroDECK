@@ -17,6 +17,10 @@ finish-args:
 - --filesystem=xdg-run/app/com.discordapp.Discord:create
 command: ryujinx-wrapper
 
+# update this: https://github.com/Ryujinx/Ryujinx/blob/master/global.json
+# update this: flathub nuget_sources.json
+# update this: flathub ryujinx-wrapper
+
 modules:
 - name: Ryujinx
   buildsystem: simple
