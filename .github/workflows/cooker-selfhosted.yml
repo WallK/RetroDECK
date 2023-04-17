@@ -44,11 +44,10 @@ jobs:
           org.freedesktop.Sdk.Extension.dotnet6/x86_64/22.08
           /bin/bash ${GITHUB_WORKSPACE}/automation_tools/update_sha.sh # Run SHA placehold replacement script for dynamic archives
       
-      - name: Installing dotnet for Ryujinx
+      - name: [Ryujinx] Installing dotnet
         uses: actions/setup-dotnet@v3
         with:
           global-json-file: rd-submodules/ryujinx/global.json
-
 
       - name: Build flatpak
         run: |
