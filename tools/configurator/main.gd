@@ -30,6 +30,10 @@ func _on_quickresume_advanced_pressed():
 	popup.set_content("res://popup_content_test.tscn")
 	$Background.add_child(popup)
 
+func _on_bios_button_pressed():
+	var popup = load("res://components/popup.tscn").instantiate() as Control
+	popup.set_content("res://popup_content_test.tscn")
+	$Background.add_child(popup)
 
 func _on_exit_button_pressed():
 	_exit()
