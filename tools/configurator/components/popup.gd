@@ -5,7 +5,7 @@ var content = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if (content != null):
-		$Panel/VBoxContainer/ContentContainer.add_child(content)
+		$Panel/MarginContainer/VBoxContainer/ContentContainer/MarginContainer.add_child(content)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -27,12 +27,12 @@ func _on_control_mouse_entered(control: Node):
 
 func _on_quickresume_advanced_pressed():
 	var popup = load("res://components/popup.tscn").instantiate() as Control
-	popup.set_content("res://popup_content_test.tscn")
+	popup.set_content("res://components/popups_content/popup_content_test.tscn")
 	$Background.add_child(popup)
 
 func _on_bios_button_pressed():
 	var popup = load("res://components/popup.tscn").instantiate() as Control
-	popup.set_content("res://popup_content_test.tscn")
+	popup.set_content("res://components/popups_content/bios_popup_content.tscn")
 	$Background.add_child(popup)
 
 func _on_exit_button_pressed():
