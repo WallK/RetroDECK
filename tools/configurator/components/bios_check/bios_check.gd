@@ -4,10 +4,12 @@ var file := FileAccess
 var bios_tempfile := "bios_test_file"
 var BIOS_COLUMNS_BASIC := ["BIOS File Name", "System", "Found", "Hash Match", "Description"]
 var BIOS_COLUMNS_EXPERT := ["BIOS File Name", "System", "Found", "Hash Match", "Description", "Subdirectory", "Hash"]
+@onready var bios_type:int = get_tree().current_scene.bios_type
 
 func _ready():
-	var table = $Table
-	if true:
+	var table := $Table
+	
+	if bios_type == 0:
 		table.columns = BIOS_COLUMNS_BASIC.size()
 		for i in BIOS_COLUMNS_BASIC.size():
 			table.set_column_title(i, BIOS_COLUMNS_BASIC[i])
@@ -15,7 +17,9 @@ func _ready():
 		table.columns = BIOS_COLUMNS_EXPERT.size()
 		for i in BIOS_COLUMNS_EXPERT.size():
 			table.set_column_title(i, BIOS_COLUMNS_EXPERT[i])
-
+	
+	
+	
 	var root = table.create_item()
 	table.hide_root = true
 	if file.file_exists(bios_tempfile): #File to be removed after script is done
