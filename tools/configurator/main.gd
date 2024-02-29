@@ -32,7 +32,8 @@ func _on_quickresume_advanced_pressed():
 
 func _on_bios_button_pressed():
 	var popup = load("res://components/popup.tscn").instantiate() as Control
-	popup.set_content("res://components/popups_content/bios_popup_content.tscn")
+	popup.set_title("BIOS File Check")
+	popup.set_content("res://components/bios_check/bios_popup_content.tscn")
 	$Background.add_child(popup)
 
 func _on_exit_button_pressed():
